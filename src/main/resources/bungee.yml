@@ -1,0 +1,4 @@
+name: Turromantico
+version: ${version}
+author: Joesvart
+main: me.joesvart.turromantico.Turromantico

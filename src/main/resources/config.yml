@@ -1,0 +1,20 @@
+BOOLEANS:
+  MAINTENANCE: true
+
+MOTDS:
+  - '&6&lExample Network \n&7This is the default description! Change it on &e&nconfig.yml'
+
+MAINTENANCE:
+  MAINTENANCE-KICK: "&cThe network is currently undergoing maintenance, check back soon!"
+  MAINTENANCE-SERVER-PING: "Maintenance"
+
+  MAINTENANCE-ON: "&aThe maintenance mode has been enabled successfully!"
+  MAINTENANCE-OFF: "&CThe maintenance mode has been disabled successfully!"
+
+HUB:
+  SEND-HUB: "&bSending you to the hub!"
+  ALREADY-CONNECTED: "&cYou are already connected to the hub!"
+
+MESSAGES:
+  CONFIG-RELOADED: "&aThe config has been reloaded successfully!"
+
