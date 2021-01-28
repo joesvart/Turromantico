@@ -23,10 +23,10 @@ public class HubCommand extends Command {
         if (sender instanceof ProxiedPlayer) {
             ProxiedPlayer player = (ProxiedPlayer) sender;
 
-            if (!player.getServer().getInfo().getName().equals("hub")) {
+            if (!player.getServer().getInfo().getName().equals(plugin.getTurromanticoConfiguration().get().getString("HUB.HUB-SERVER"))) {
                 player.sendMessage(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("HUB.SEND-HUB")));
 
-                ServerInfo target = ProxyServer.getInstance().getServerInfo("hub");
+                ServerInfo target = ProxyServer.getInstance().getServerInfo(plugin.getTurromanticoConfiguration().get().getString("HUB.HUB-SERVER"));
 
                 player.connect(target);
             } else {
