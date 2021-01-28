@@ -1,8 +1,26 @@
+# Variables: <new-line> | <timer>
 BOOLEANS:
   MAINTENANCE: true
+  MOTD: true
+  MOTD-SERVER-PING: true
 
 MOTDS:
-  - '&6&lExample Network \n&7This is the default description! Change it on &e&nconfig.yml'
+  - '&6&lExample Network <new-line>&7This is the default description! Change it on &e&nconfig.yml'
+
+# This option only work with
+# § symbol and not with & symbol.
+MOTD-SERVER-PING:
+  - "§7§m---*----------------------*---"
+  - "             §6§lExample Network  "
+  - ""
+  - "§7This is the default message!"
+  - "§7Change it on §e§nconfig.yml"
+  - ""
+  - "§a* Store: §fstore.example.com"
+  - "§d* Website: §fwww.example.com"
+  - "§9* Discord: §fdiscord.example.com"
+  - "§b* Twitter: §f@Example"
+  - "§7§m---*----------------------*---"
 
 MAINTENANCE:
   MAINTENANCE-KICK: "&cThe network is currently undergoing maintenance, check back soon!"
