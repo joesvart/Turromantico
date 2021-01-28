@@ -1,9 +1,23 @@
 # Placeholders: <new-line> | <timer>
+
 BOOLEANS:
+  # Maintenance Boolean
+  # For activate and deactivate
+  # the maintenance option.
   MAINTENANCE: true
+
+  # MOTDs Booleans
+  # For activate and deactivate
+  # the motds options.
   MOTD: true
   MOTD-SERVER-PING: true
-  FAKE-PLAYERS: true
+
+  # Players Booleans
+  # For activate and deactivate
+  # the players options.
+  MAX-PLAYERS: true
+  JUST-ONE-MORE: false
+  FAKE-PLAYERS: false
 
 MOTDS:
   - '&6&lExample Network <new-line>&7This is the default description! Change it on &e&nconfig.yml'
@@ -30,6 +44,9 @@ MAINTENANCE:
 
   MAINTENANCE-ON: "&aThe maintenance mode has been enabled successfully!"
   MAINTENANCE-OFF: "&CThe maintenance mode has been disabled successfully!"
+
+PLAYERS:
+  MAX-PLAYERS: 1000
 
 FAKE-PLAYERS:
   AMOUNT: 5
