@@ -3,6 +3,7 @@ package me.joesvart.turromantico;
 import me.joesvart.turromantico.commands.HubCommand;
 import me.joesvart.turromantico.commands.MOTDCommand;
 import me.joesvart.turromantico.commands.MaintenanceCommand;
+import me.joesvart.turromantico.listeners.FakePlayerListener;
 import me.joesvart.turromantico.listeners.MOTDListener;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,13 +29,14 @@ public class Turromantico extends Plugin {
         plugin = this;
 
         /**
-         * Register the Configs
+         * Register the
+         * Configurations.
          */
         turromanticoConfiguration = new ConfigHelper(this, "config.yml", true);
 
         /**
          * Register the commands
-         * and the listeners
+         * and the listeners.
          */
         registerCommands();
         registerListeners();
@@ -51,6 +53,7 @@ public class Turromantico extends Plugin {
     public void registerListeners() {
         PluginManager pluginManager = getProxy().getPluginManager();
 
+        pluginManager.registerListener(this, new FakePlayerListener(this));
         pluginManager.registerListener(this, new MaintenanceListener(this));
         pluginManager.registerListener(this, new MOTDListener(this));
     }
