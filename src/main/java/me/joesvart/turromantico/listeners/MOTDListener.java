@@ -1,5 +1,6 @@
 package me.joesvart.turromantico.listeners;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import me.joesvart.turromantico.Turromantico;
 import me.joesvart.turromantico.utils.ColorHelper;
@@ -17,6 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @RequiredArgsConstructor
 public class MOTDListener implements Listener {
 
+    @Getter
     private final Turromantico plugin;
 
     @EventHandler
