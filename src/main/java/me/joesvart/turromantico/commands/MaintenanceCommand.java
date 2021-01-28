@@ -24,7 +24,6 @@ public class MaintenanceCommand extends Command {
             sender.sendMessage("");
             sender.sendMessage(ChatColor.DARK_GRAY + "▸ " + ChatColor.YELLOW + "/maintenance on " + ChatColor.GRAY + "Activate the maintenance");
             sender.sendMessage(ChatColor.DARK_GRAY + "▸ " + ChatColor.YELLOW + "/maintenance off " + ChatColor.GRAY + "Deactivate the maintenance");
-            sender.sendMessage(ChatColor.DARK_GRAY + "▸ " + ChatColor.YELLOW + "/maintenance reload " + ChatColor.GRAY + "Reload the config");
             sender.sendMessage("");
             return;
         }
@@ -39,10 +38,6 @@ public class MaintenanceCommand extends Command {
                 plugin.getTurromanticoConfiguration().get().set("BOOLEANS.MAINTENANCE", false);
                 sender.sendMessage(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("MAINTENANCE.MAINTENANCE-OFF")));
                 plugin.getTurromanticoConfiguration().save();
-                break;
-            case "reload":
-                plugin.getTurromanticoConfiguration().reload();
-                sender.sendMessage(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("MESSAGES.CONFIG-RELOADED")));
                 break;
         }
     }
