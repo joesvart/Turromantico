@@ -45,7 +45,7 @@ public class Turromantico extends Plugin {
 
         pluginManager.registerCommand(this, new MaintenanceCommand(this));
         pluginManager.registerCommand(this, new MOTDCommand(this));
-        pluginManager.registerCommand(this, new HubCommand(plugin));
+        pluginManager.registerCommand(this, new HubCommand(this));
     }
 
     public void registerListeners() {
