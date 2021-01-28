@@ -1,11 +1,13 @@
-# Variables: <new-line> | <timer>
+# Placeholders: <new-line> | <timer>
 BOOLEANS:
   MAINTENANCE: true
   MOTD: true
   MOTD-SERVER-PING: true
+  FAKE-PLAYERS: true
 
 MOTDS:
   - '&6&lExample Network <new-line>&7This is the default description! Change it on &e&nconfig.yml'
+  - "&3&lExample Network <new-line>&7This is the default description! Change it on &b&nconfig.yml"
 
 # This option only work with
 # § symbol and not with & symbol.
@@ -29,7 +31,11 @@ MAINTENANCE:
   MAINTENANCE-ON: "&aThe maintenance mode has been enabled successfully!"
   MAINTENANCE-OFF: "&CThe maintenance mode has been disabled successfully!"
 
+FAKE-PLAYERS:
+  AMOUNT: 5
+
 HUB:
+  HUB-SERVER: "hub"
   SEND-HUB: "&bSending you to the hub!"
   ALREADY-CONNECTED: "&cYou are already connected to the hub!"
 
