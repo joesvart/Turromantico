@@ -1,5 +1,6 @@
 package me.joesvart.turromantico.listeners;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import me.joesvart.turromantico.Turromantico;
@@ -15,7 +16,7 @@ import net.md_5.bungee.event.EventHandler;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class MOTDListener implements Listener {
 
     @Getter

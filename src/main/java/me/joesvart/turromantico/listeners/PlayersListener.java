@@ -1,5 +1,6 @@
 package me.joesvart.turromantico.listeners;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import me.joesvart.turromantico.Turromantico;
 import net.md_5.bungee.api.ServerPing;
@@ -7,14 +8,11 @@ import net.md_5.bungee.api.event.ProxyPingEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
+@AllArgsConstructor
 public class PlayersListener implements Listener {
 
     @Getter
     private final Turromantico plugin;
-
-    public PlayersListener(Turromantico plugin) {
-        this.plugin = plugin;
-    }
 
     @EventHandler
     public void onProxyPing(ProxyPingEvent event) {
@@ -39,7 +37,7 @@ public class PlayersListener implements Listener {
          * option.
          */
         if (plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.JUST-ONE-MORE")) {
-            maxPlayers = plugin.getTurromanticoConfiguration().get().getByte("BOOLEANS.JUST-ONE-MORE") + onlinePlayers + 1;
+            maxPlayers = onlinePlayers + 1;
 
             players.setMax(maxPlayers);
         }
