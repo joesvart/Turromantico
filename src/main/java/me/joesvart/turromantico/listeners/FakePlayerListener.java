@@ -27,8 +27,8 @@ public class FakePlayerListener implements Listener {
          * players getting of
          * the configuration.
          */
-        if (plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.FAKE-PLAYERS")) {
-            onlinePlayers = onlinePlayers + plugin.getTurromanticoConfiguration().get().getInt("FAKE-PLAYERS.AMOUNT");
+        if (plugin.getMainConfig().get().getBoolean("BOOLEANS.FAKE-PLAYERS")) {
+            onlinePlayers = onlinePlayers + plugin.getMainConfig().get().getInt("FAKE-PLAYERS.AMOUNT");
 
             players.setOnline(onlinePlayers);
         }

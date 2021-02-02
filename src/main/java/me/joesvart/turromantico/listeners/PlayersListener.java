@@ -26,8 +26,8 @@ public class PlayersListener implements Listener {
          * Max players
          * option.
          */
-        if (plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.MAX-PLAYERS")) {
-            maxPlayers = plugin.getTurromanticoConfiguration().get().getInt("PLAYERS.MAX-PLAYERS");
+        if (plugin.getMainConfig().get().getBoolean("BOOLEANS.MAX-PLAYERS")) {
+            maxPlayers = plugin.getMainConfig().get().getInt("PLAYERS.MAX-PLAYERS");
 
             players.setMax(maxPlayers);
         }
@@ -36,7 +36,7 @@ public class PlayersListener implements Listener {
          * Just one more
          * option.
          */
-        if (plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.JUST-ONE-MORE")) {
+        if (plugin.getMainConfig().get().getBoolean("BOOLEANS.JUST-ONE-MORE")) {
             maxPlayers = onlinePlayers + 1;
 
             players.setMax(maxPlayers);

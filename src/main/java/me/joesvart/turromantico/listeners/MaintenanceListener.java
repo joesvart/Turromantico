@@ -20,14 +20,14 @@ public class MaintenanceListener implements Listener {
 
     @EventHandler
     public void onProxyPing(ProxyPingEvent event) {
-        if (!plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.MAINTENANCE")) return;
+        if (!plugin.getMainConfig().get().getBoolean("BOOLEANS.MAINTENANCE")) return;
 
         /**
          * Get the response
          * of the server.
          */
         ServerPing response = event.getResponse();
-        ServerPing.Protocol protocol = new ServerPing.Protocol(plugin.getTurromanticoConfiguration().get().getString("MAINTENANCE.MAINTENANCE-SERVER-PING"), response.getVersion().getProtocol() - 1);
+        ServerPing.Protocol protocol = new ServerPing.Protocol(plugin.getMainConfig().get().getString("MAINTENANCE.MAINTENANCE-SERVER-PING"), response.getVersion().getProtocol() - 1);
 
         /**
          * Set the custom
@@ -39,7 +39,7 @@ public class MaintenanceListener implements Listener {
 
     @EventHandler
     public void onPreLogin(PreLoginEvent event) {
-        if (!plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.MAINTENANCE")) return;
+        if (!plugin.getMainConfig().get().getBoolean("BOOLEANS.MAINTENANCE")) return;
 
         ProxiedPlayer player = ProxyServer.getInstance().getPlayer(event.getConnection().getUniqueId());
 
@@ -50,7 +50,7 @@ public class MaintenanceListener implements Listener {
          * Set the custom Maintenace
          * kick message.
          */
-        event.setCancelReason(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("MAINTENANCE.MAINTENANCE-KICK")));
+        event.setCancelReason(ColorHelper.translate(plugin.getMainConfig().get().getString("MAINTENANCE.MAINTENANCE-KICK")));
         event.setCancelled(true);
     }
 }

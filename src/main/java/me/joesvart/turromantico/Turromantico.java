@@ -19,7 +19,7 @@ public class Turromantico extends Plugin {
     @Getter
     private static Turromantico plugin;
 
-    private ConfigHelper turromanticoConfiguration;
+    private ConfigHelper mainConfig;
 
     @Override
     public void onEnable() {
@@ -29,7 +29,7 @@ public class Turromantico extends Plugin {
          * Register the
          * Configurations.
          */
-        turromanticoConfiguration = new ConfigHelper(this, "config.yml", true);
+        mainConfig = new ConfigHelper(this, "config.yml", true);
 
         /**
          * Register the commands
@@ -79,6 +79,6 @@ public class Turromantico extends Plugin {
         /**
          * Save the config
          */
-        turromanticoConfiguration.save();
+        mainConfig.save();
     }
 }

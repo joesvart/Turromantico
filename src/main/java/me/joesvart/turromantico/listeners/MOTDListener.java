@@ -24,7 +24,7 @@ public class MOTDListener implements Listener {
 
     @EventHandler
     public void onProxyMessagePing(ProxyPingEvent event) {
-        Configuration config = plugin.getTurromanticoConfiguration().get();
+        Configuration config = plugin.getMainConfig().get();
         List<String> serverPing = config.getStringList(ColorHelper.translate("MOTD-SERVER-PING"));
 
         /**
@@ -43,7 +43,7 @@ public class MOTDListener implements Listener {
          * This set the player
          * response.
          */
-        if (plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.MOTD-SERVER-PING")) {
+        if (plugin.getMainConfig().get().getBoolean("BOOLEANS.MOTD-SERVER-PING")) {
             event.getResponse().getPlayers().setSample(motdPing);
         }
     }
@@ -57,7 +57,7 @@ public class MOTDListener implements Listener {
          * the new line for <new-line>
          * variable / placeholder.
          */
-        if (plugin.getTurromanticoConfiguration().get().getBoolean("BOOLEANS.MOTD")) {
+        if (plugin.getMainConfig().get().getBoolean("BOOLEANS.MOTD")) {
             response.setDescriptionComponent(replace());
         }
 
@@ -69,7 +69,7 @@ public class MOTDListener implements Listener {
     }
 
     private TextComponent replace() {
-        Configuration config = plugin.getTurromanticoConfiguration().get();
+        Configuration config = plugin.getMainConfig().get();
         ThreadLocalRandom thread = ThreadLocalRandom.current();
 
         /**

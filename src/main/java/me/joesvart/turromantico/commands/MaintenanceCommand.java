@@ -30,14 +30,14 @@ public class MaintenanceCommand extends Command {
 
         switch (args[0].toLowerCase()) {
             case "on":
-                plugin.getTurromanticoConfiguration().get().set("BOOLEANS.MAINTENANCE", true);
-                sender.sendMessage(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("MAINTENANCE.MAINTENANCE-ON")));
-                plugin.getTurromanticoConfiguration().save();
+                plugin.getMainConfig().get().set("BOOLEANS.MAINTENANCE", true);
+                sender.sendMessage(ColorHelper.translate(plugin.getMainConfig().get().getString("MAINTENANCE.MAINTENANCE-ON")));
+                plugin.getMainConfig().save();
                 break;
             case "off":
-                plugin.getTurromanticoConfiguration().get().set("BOOLEANS.MAINTENANCE", false);
-                sender.sendMessage(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("MAINTENANCE.MAINTENANCE-OFF")));
-                plugin.getTurromanticoConfiguration().save();
+                plugin.getMainConfig().get().set("BOOLEANS.MAINTENANCE", false);
+                sender.sendMessage(ColorHelper.translate(plugin.getMainConfig().get().getString("MAINTENANCE.MAINTENANCE-OFF")));
+                plugin.getMainConfig().save();
                 break;
         }
     }

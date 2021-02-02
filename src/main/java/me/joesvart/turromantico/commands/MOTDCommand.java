@@ -29,8 +29,8 @@ public class MOTDCommand extends Command {
 
         switch (args[0].toLowerCase()) {
             case "reload":
-                plugin.getTurromanticoConfiguration().reload();
-                sender.sendMessage(ColorHelper.translate(plugin.getTurromanticoConfiguration().get().getString("MESSAGES.CONFIG-RELOADED")));
+                plugin.getMainConfig().reload();
+                sender.sendMessage(ColorHelper.translate(plugin.getMainConfig().get().getString("MESSAGES.CONFIG-RELOADED")));
                 break;
         }
     }
