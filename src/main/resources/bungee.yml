@@ -1,4 +1,4 @@
 name: Turromantico
-version: ${version}
+version: ${project.version}
 author: Joesvart
 main: me.joesvart.turromantico.Turromantico
