@@ -17,16 +17,12 @@ import net.md_5.bungee.api.plugin.PluginManager;
 public class Turromantico extends Plugin {
 
     @Getter
-    private static Turromantico instance;
-
-    @Getter
     private static Turromantico plugin;
 
     private ConfigHelper turromanticoConfiguration;
 
     @Override
     public void onEnable() {
-        instance = this;
         plugin = this;
 
         /**
